@@ -1,2 +1,4 @@
 openpyxl
 msoffcrypto-tool
+pandas
+numpy
