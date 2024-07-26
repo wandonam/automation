@@ -5,7 +5,7 @@ from openpyxl import load_workbook
 from openpyxl.styles import NamedStyle
 
 #drvie: 주문서(전처리)
-df = pd.read_excel(f'./data/raw_2024.xlsx')
+df = pd.read_excel(f'../cmn_data/raw_2024.xlsx')
 #cafe24: 고객 -> 회원조회 -> 주문 회원 조회
 db_user = pd.read_csv(f'./data/db_order.csv')
 #drive: gross management
@@ -50,7 +50,7 @@ crm_filtered.to_excel(output_path, index=False, engine='openpyxl')
 wb = load_workbook(output_path)
 ws = wb.active
 
-date_columns = ['A', 'H', 'I']
+date_columns = ['A', 'J', 'K']
 date_style = NamedStyle(name='datetime', number_format='YYYY-MM-DD')
 
 for col in date_columns:
